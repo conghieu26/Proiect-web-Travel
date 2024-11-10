@@ -63,12 +63,6 @@ export default {
       .andWhere("IDGiuong", index);
   },
 
-  // thêm phòng
-  async add(phong) {
-    const result = await db("phong").insert(phong);
-    return result[0];
-  },
-
   // Cập nhật phòng
   updateRoom(phong) {
     return db("phong").where("ID", phong.ID).update(phong);
